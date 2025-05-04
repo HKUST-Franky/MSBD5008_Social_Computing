@@ -1,0 +1,6 @@
+numpy
+pandas
+seaborn
+torch_geometric
+torch
+scikit-learn
