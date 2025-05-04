@@ -43,7 +43,6 @@ We implement and compare two GNN architectures:
 - Graph Attention Network (GAT)
     - **Architecture**: Multiple GAT layers with multi-head attention 
 
-    where α<sub>ij</sub> are attention coefficients  
     - **Enhancements**:
         - Layer normalization for feature stability  
         - Residual connections to prevent gradient vanishing  
