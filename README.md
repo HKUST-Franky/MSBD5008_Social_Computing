@@ -41,26 +41,22 @@ We extract rich features from multiple sources:
 We implement and compare two GNN architectures:
 
 - Graph Attention Network (GAT)
-    - **Architecture**: Multiple GAT layers with multi-head attention  
-    - **Message passing function**:  
-    h_i^(l+1) = σ(∑_(j∈N(i)) α_ij W^(l) h_j^(l))
+    - **Architecture**: Multiple GAT layers with multi-head attention 
 
     where α<sub>ij</sub> are attention coefficients  
     - **Enhancements**:
-    - Layer normalization for feature stability  
-    - Residual connections to prevent gradient vanishing  
-    - Dropout for regularization  
-    - Enhanced feature preprocessing  
+        - Layer normalization for feature stability  
+        - Residual connections to prevent gradient vanishing  
+        - Dropout for regularization  
+        - Enhanced feature preprocessing  
 
 - GraphSAGE
-    - **Architecture**: Multiple SAGEConv layers for message passing  
-    - **Aggregation function**:
-    h_v^(l+1) = σ(W·CONCAT(h_v^(l), AGG({h_u^(l), ∀u∈N(v)})))
+    - **Architecture**: Multiple SAGEConv layers for message passing
 
     - **Enhancements**:
-    - Batch normalization between layers  
-    - Multiple aggregation steps for wider neighborhood information  
-    - Parameter-optimized activation functions  
+        - Batch normalization between layers  
+        - Multiple aggregation steps for wider neighborhood information  
+        - Parameter-optimized activation functions  
 
 ### Training and Evaluation Pipeline
 - **Data Splitting**: Stratified train/validation/test splits to maintain class distribution  
